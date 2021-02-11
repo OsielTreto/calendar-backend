@@ -2,6 +2,7 @@ const { response } = require('express');
 const bcrypt = require('bcryptjs');
 const Usuario = require('../models/Usuarios')
 const { generarJWT } = require('../helpers/jwt');
+
 const crearUsuario = async (req, res = response) => {
 
     const { email, password } = req.body;
@@ -96,6 +97,8 @@ const revalidarToken = async (req, res = response) => {
 
     res.json({
         ok: true,
+        uid,
+        name,
         token
     })
 }
