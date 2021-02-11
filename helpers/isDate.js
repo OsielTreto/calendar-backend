@@ -15,4 +15,4 @@ const isDate = (value) => {
 }
 
 
-module.exports = isDate;
+module.exports = { isDate };
